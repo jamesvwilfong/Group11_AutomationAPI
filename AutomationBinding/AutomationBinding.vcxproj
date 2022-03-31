@@ -93,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutomationBindingExports.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="CubeBuilder.h" />
+    <ClInclude Include="PartCollection.h" />
     <ClInclude Include="Wire.h" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="BlockBuilder.h" />
@@ -111,11 +114,14 @@
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="BlockBuilder.cpp" />
     <ClCompile Include="CADObject.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="CubeBuilder.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Extrude.cpp" />
     <ClCompile Include="FeatureCollection.cpp" />
     <ClCompile Include="IBuilder.cpp" />
     <ClCompile Include="Part.cpp" />
+    <ClCompile Include="PartCollection.cpp" />
     <ClCompile Include="RoutingCollection.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="Wire.cpp" />

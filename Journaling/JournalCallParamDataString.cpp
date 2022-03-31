@@ -20,7 +20,16 @@ void JournalCallParamDataString::Journal()
         // i.e. if d:\dir\some.prt  we need to actualy change this to 
         //         d:\\dir\\some.prt
         
-        std::string jnlString = "\"" + m_value + "\"";
+        std::string res = "";
+        for (int i = 0; i < m_value.length() - 1; i++) {
+            if (m_value.at(i) == '\\') {
+                res = res + "\\\\";
+            }
+            else {
+                res = res + m_value.at(i);
+            }
+        }
+        std::string jnlString = "\"" + res + "\"";
         GetActiveJournalFile()->WriteToFile(jnlString);
     }
     else if (this->m_paramType == JournalCallParamData::ParameterMetaType::OUTPUT)

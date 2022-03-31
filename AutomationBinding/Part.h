@@ -9,6 +9,8 @@ namespace AutomationAPI
 
 	class FeatureCollection;
 	class RoutingCollection;
+	class PartCollection;
+
 	class PartImpl;
 	/// <summary>
 	/// Represents a part file in our sample CAD application.
@@ -39,6 +41,14 @@ namespace AutomationAPI
 			*/
 			RoutingCollection* Routing();
 			/*
+			
+
+			/**
+			* Returns the Parts collection for the part.
+			*/
+			PartCollection* Parts();
+			/*
+			
 			* Internal Usage only.
 			*/
 			static Part* CreatePart(int guid);

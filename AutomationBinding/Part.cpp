@@ -2,6 +2,7 @@
 #include "..\Core\GuidObject.h"
 #include "..\AppPartOps\PartOps.h"
 #include "FeatureCollection.h"
+#include "PartCollection.h"
 #include "RoutingCollection.h"
 
 using namespace AutomationAPI;
@@ -14,6 +15,7 @@ namespace AutomationAPI
 
 		FeatureCollection* Features();
 		RoutingCollection* Routing();
+		PartCollection* Parts();
 
 		virtual ~PartImpl();
 		PartImpl() = delete;
@@ -22,6 +24,7 @@ namespace AutomationAPI
 		int m_guid;
 		FeatureCollection* m_featureCollection;
 		RoutingCollection* m_routingCollection;
+		PartCollection* m_partCollection;
 
 	};
 }
@@ -77,6 +80,7 @@ AutomationAPI::PartImpl::PartImpl(int guid)
 	m_guid = guid;
 	m_featureCollection = new FeatureCollection(m_guid);
 	m_routingCollection = new RoutingCollection(m_guid);
+	m_partCollection = new PartCollection(m_guid);
 }
 
 AutomationAPI::PartImpl::~PartImpl()
@@ -84,6 +88,7 @@ AutomationAPI::PartImpl::~PartImpl()
 
 	delete m_featureCollection ;
 	delete m_routingCollection ;
+	delete m_partCollection ;
 }
 
 AutomationAPI::RoutingCollection* AutomationAPI::PartImpl::Routing()
@@ -104,5 +109,15 @@ AutomationAPI::FeatureCollection* AutomationAPI::PartImpl::Features()
 AutomationAPI::FeatureCollection* AutomationAPI::Part::Features()
 {
 	return m_partImpl->Features();
+}
+
+AutomationAPI::PartCollection* AutomationAPI::PartImpl::Parts()
+{
+	return m_partCollection;
+}
+
+AutomationAPI::PartCollection* AutomationAPI::Part::Parts()
+{
+	return m_partImpl->Parts();
 }
 
