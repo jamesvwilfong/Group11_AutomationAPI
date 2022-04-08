@@ -8,7 +8,7 @@ namespace AutomationAPI
 
 
 	/// <summary>
-	/// CubeBuilder comment
+	/// CubeBuilder is a set of methods for building and modifying Cube objects.
 	/// </summary>
 	class AUTOMATIONBINDING_API CubeBuilder : public IBuilder
 	{

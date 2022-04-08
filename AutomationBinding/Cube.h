@@ -5,7 +5,7 @@
 namespace AutomationAPI
 {
 	/// <summary>
-	/// Cube comment
+	/// Cube is an object in the CAD API.
 	/// </summary>
 	class Cube : CADObject
 	{

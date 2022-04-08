@@ -5,7 +5,7 @@ namespace AutomationAPI
 	class CubeBuilder;
 	class Cube;
 	/// <summary>
-	/// PartCollection comment
+	/// The PartCollection class is a set of methods for initializing builders for parts, such as CubeBuilder.
 	/// </summary>
 	class AUTOMATIONBINDING_API PartCollection
 	{
